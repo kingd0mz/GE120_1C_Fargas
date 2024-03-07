@@ -21,12 +21,8 @@ Dominic Fagas Jr.
 
 # MUST BE A STRING INPUT
 dms = "118-25-14.48"
-values = dms.split("-")
+degrees, minutes, seconds = dms.split("-")
 
-degrees = int(values[0])
-minutes = int(values[1])
-seconds = float(values[2])
-
-dd = degrees + (minutes/60) + (seconds/3600)
+dd = int(degrees) + (int(minutes)/60) + (float(seconds)/3600)
 
 print("ETO YUNG VALUE:", round(dd,6))
